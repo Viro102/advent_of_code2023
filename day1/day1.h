@@ -1,24 +1,25 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <array>
 #include "common.h"
 
-int part1();
+int day1Part1();
 
-int part2();
+int day1Part2();
 
 std::string findNumber(const std::string_view &str, const std::array<std::string, 9> &arr);
 
-int main() {
-    int sum = part1();
-    int sum2 = part2();
+void day1() {
+    int sum = day1Part1();
+    int sum2 = day1Part2();
 
     std::cout << "Sum part 1: " << sum << " Sum part 2: " << sum2 << std::endl;
-    return 0;
 }
 
 // Part 1
-int part1() {
+int day1Part1() {
     int sum{0};
     auto file = openFile("..\\day1\\input.txt");
 
@@ -44,9 +45,9 @@ int part1() {
 }
 
 // Part 2
-int part2() {
+int day1Part2() {
     std::array<std::string, 9> numbers{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-
+    
     int sum{0};
     auto file = openFile("..\\day1\\input.txt");
 
